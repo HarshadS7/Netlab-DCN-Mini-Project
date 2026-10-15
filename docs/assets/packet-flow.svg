@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-labelledby="title desc">
+  <title id="title">From application data to an Ethernet frame</title>
+  <desc id="desc">Application bytes gain a TCP or UDP header, an IPv4 header, an Ethernet header and an FCS. A simulated channel introduces loss, delay or bit errors. The receiver checks FCS, IPv4 and transport checksums.</desc>
+  <rect width="1200" height="300" rx="18" fill="#101724"/>
+  <rect x="1" y="1" width="1198" height="298" rx="17" fill="none" stroke="#2a3b54"/>
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <text x="32" y="38" fill="#e4e8f0" font-size="17" font-weight="700">ONE MESSAGE. EVERY LAYER.</text>
+    <text x="32" y="63" fill="#96a8c2" font-size="13">Each header adds information. Each check gives the receiver a reason to trust the bytes.</text>
+    <g transform="translate(32 91)" font-size="12" font-weight="600" text-anchor="middle">
+      <text x="85" y="0" fill="#f9ba82">01 / APPLICATION</text>
+      <rect y="20" width="170" height="56" rx="8" fill="#f2994a"/><text x="85" y="53" fill="#24180e">Application data</text>
+      <path d="M181 48H202M195 41L202 48L195 55" fill="none" stroke="#7d91ae" stroke-width="2"/>
+      <text x="320" y="0" fill="#79dfbf">02 / TRANSPORT</text>
+      <rect x="214" y="20" width="212" height="56" rx="8" fill="#f2994a"/>
+      <path d="M222 20H300V76H222Q214 76 214 68V28Q214 20 222 20" fill="#27c093"/>
+      <text x="257" y="53" fill="#08281f">TCP / UDP</text><text x="363" y="53" fill="#24180e">Data</text>
+      <path d="M437 48H458M451 41L458 48L451 55" fill="none" stroke="#7d91ae" stroke-width="2"/>
+      <text x="586" y="0" fill="#a4ceff">03 / NETWORK</text>
+      <rect x="470" y="20" width="232" height="56" rx="8" fill="#f2994a"/>
+      <path d="M478 20H542V76H478Q470 76 470 68V28Q470 20 478 20" fill="#4da3ff"/>
+      <rect x="542" y="20" width="80" height="56" fill="#27c093"/>
+      <text x="506" y="53" fill="#091d33">IPv4</text><text x="582" y="53" fill="#08281f">TCP/UDP</text><text x="662" y="53" fill="#24180e">Data</text>
+      <path d="M713 48H734M727 41L734 48L727 55" fill="none" stroke="#7d91ae" stroke-width="2"/>
+      <text x="941" y="0" fill="#d1a7f8">04 / DATA LINK</text>
+      <rect x="746" y="20" width="390" height="56" rx="8" fill="#b57bee"/>
+      <rect x="826" y="20" width="65" height="56" fill="#4da3ff"/>
+      <rect x="891" y="20" width="80" height="56" fill="#27c093"/>
+      <rect x="971" y="20" width="100" height="56" fill="#f2994a"/>
+      <text x="786" y="53" fill="#221234">Ethernet</text><text x="858" y="53" fill="#091d33">IPv4</text><text x="931" y="53" fill="#08281f">TCP/UDP</text><text x="1021" y="53" fill="#24180e">Data*</text><text x="1103" y="53" fill="#221234">FCS</text>
+    </g>
+    <path d="M1010 179V198H916" fill="none" stroke="#7d91ae" stroke-width="2"/>
+    <path d="M923 191L916 198L923 205" fill="none" stroke="#7d91ae" stroke-width="2"/>
+    <rect x="614" y="181" width="290" height="35" rx="8" fill="#1d2838" stroke="#425571"/>
+    <text x="759" y="203" fill="#d7e2f2" font-size="12" text-anchor="middle">SIMULATED CHANNEL · loss / delay / errors</text>
+    <path d="M602 198H571" fill="none" stroke="#7d91ae" stroke-width="2"/>
+    <path d="M578 191L571 198L578 205" fill="none" stroke="#7d91ae" stroke-width="2"/>
+    <text x="32" y="204" fill="#79dfbf" font-size="13" font-weight="600">RECEIVER</text>
+    <text x="130" y="204" fill="#d7e2f2" font-size="13">Check FCS → IPv4 checksum → transport checksum</text>
+    <path d="M32 235H1168" stroke="#2a3b54"/>
+    <text x="32" y="265" fill="#96a8c2" font-size="12">* Ethernet padding is added when needed. Diagram shows logical encapsulation; frame contents are constructed locally.</text>
+  </g>
+</svg>
